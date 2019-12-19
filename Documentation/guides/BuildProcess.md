@@ -1396,6 +1396,13 @@ enable and disable.
 See the [lint documentation](https://developer.android.com/studio/write/lint)
 for more details.
 
+### AndroidRuleSet
+
+The Build action `AndroidRuleSet` enables a lint xml configuration file to be used by the new Xamarin Android Designer layout diagnostics tool. This is only used in the layout editor.
+
+See the [lint documentation](https://developer.android.com/studio/write/lint)
+for more details. The issue ids might vary. Intellisense is provided for lint xml configuration files.
+
 
 ### AndroidNativeLibrary
 
