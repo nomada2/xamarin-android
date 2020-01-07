@@ -11,7 +11,7 @@
 # are invoked in the same way framework-assemblies is
 #
 jenkins:
-	$(MAKE) PREPARE_CI=1 prepare
+	$(MAKE) prepare
 	$(MAKE) leeroy $(ZIP_OUTPUT)
 ifeq ($(XA_INVERTED_COMMERCIAL_BUILD),true)
 	$(MAKE) commercial

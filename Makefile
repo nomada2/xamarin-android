@@ -61,6 +61,13 @@ ifneq ($(PREPARE_CI),0)
 _PREPARE_ARGS += $(_PREPARE_CI_MODE_ARGS)
 endif
 
+# Local `make jenkins` invocations should build everything by default. We need to ensure `-a` is passed to xaprepare when no CI flags are set.
+ifeq ($(PREPARE_CI_PR),0)
+ifeq ($(PREPARE_CI),0)
+_PREPARE_ARGS += -a
+endif
+endif
+
 ifneq ($(PREPARE_AUTOPROVISION),0)
 _PREPARE_ARGS += --auto-provision=yes --auto-provision-uses-sudo=yes
 endif
